@@ -46,6 +46,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'mbbill/undotree'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
+Plug 'neoclide/coc.nvim', {'branch': 'release'}
 call plug#end()
 "
 " " Luego de esta línea puedes agregar tus configuraciones y mappings
@@ -78,3 +79,10 @@ let g:fzf_branch_actions = {
       \ },
       \}
 nmap <leader>f :Files<CR>
+
+" GoTo code navigation.
+nmap <silent> gd <Plug>(coc-definition)
+nmap <silent> gy <Plug>(coc-type-definition)
+nmap <silent> gi <Plug>(coc-implementation)
+nmap <silent> gr <Plug>(coc-references)
+
