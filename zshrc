@@ -4,6 +4,12 @@
 # Path to your oh-my-zsh installation.
 export ZSH="/home/javier/.oh-my-zsh"
 
+#kitty 
+autoload -Uz compinit
+compinit
+# Completion for kitty
+kitty + complete setup zsh | source /dev/stdin
+
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -100,7 +106,7 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 # docker aliases
-alias n="nvim"
+alias nv="nvim"
 #git aliases
 alias gco="git checkout"
 alias gs="git status"
