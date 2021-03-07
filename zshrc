@@ -101,3 +101,12 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 # docker aliases
 alias n="nvim"
+#git aliases
+alias gco="git checkout"
+alias gs="git status"
+alias gc="git commit -m"
+alias ga="git add"
+alias gps="git push"
+alias gpl="git pull --rebase"
+alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+
