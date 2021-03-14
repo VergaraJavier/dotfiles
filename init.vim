@@ -9,6 +9,9 @@ Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
 Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
+Plug 'nvim-lua/popup.nvim'
+Plug 'nvim-lua/plenary.nvim'
+Plug 'nvim-telescope/telescope.nvim'
 call plug#end()
 "
 " " Luego de esta línea puedes agregar tus configuraciones y mappings
@@ -41,4 +44,3 @@ let g:fzf_branch_actions = {
       \   'confirm': v:false,
       \ },
       \}
-nmap <leader>f :Files<CR>
