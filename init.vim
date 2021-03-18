@@ -44,3 +44,15 @@ let g:fzf_branch_actions = {
       \   'confirm': v:false,
       \ },
       \}
+
+" Line bubbling
+" Use these two if you don't have prettier
+nnoremap <silent> <c-j> :m .+1<CR>==
+nnoremap <silent> <c-k> :m .-2<CR>==
+nnoremap <silent> <c-j> :m .+1<CR>
+nnoremap <silent> <c-k> :m .-2<CR>
+inoremap <silent> <c-j> <Esc>:m .+1<CR>==gi
+inoremap <silent> <c-k> <Esc>:m .-2<CR>==gi
+vnoremap <silent> <c-j> :m '>+1<CR>gv=gv
+vnoremap <silent> <c-k> :m '<-2<CR>gv=gv
+
