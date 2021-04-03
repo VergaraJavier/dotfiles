@@ -6,7 +6,6 @@ Plug 'tpope/vim-surround'
 Plug 'mbbill/undotree'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
-Plug 'neoclide/coc.nvim', {'branch': 'release'}
 Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
@@ -14,6 +13,11 @@ Plug 'nvim-telescope/telescope.nvim'
 Plug 'airblade/vim-gitgutter' " show git changes
 Plug 'itchyny/lightline.vim' " bar
 Plug 'ryanoasis/vim-devicons' " icons in bar
+Plug 'jiangmiao/auto-pairs' " pair completion
+Plug 'neovim/nvim-lspconfig' " lsp
+Plug 'Shougo/neosnippet.vim' " snippet support
+Plug 'Shougo/neosnippet-snippets' " actual snippets
+Plug 'nvim-lua/completion-nvim' " autocomplete
 call plug#end()
 "
 " " Luego de esta línea puedes agregar tus configuraciones y mappings
@@ -58,3 +62,16 @@ inoremap <silent> <c-k> <Esc>:m .-2<CR>==gi
 vnoremap <silent> <c-j> :m '>+1<CR>gv=gv
 vnoremap <silent> <c-k> :m '<-2<CR>gv=gv
 
+" buffer > tabs
+nmap <leader>j :bprev<CR>
+nmap <leader>k :bnext<CR>
+nmap <leader>q :bp <BAR> bd #<CR>
+
+" - Startup LSP Servers
+" - Set bindings: gr, gd, K, sd
+lua require'lsp'
+
+
+" - Configure completion engine
+" - Set bindings: <C-k>, <C-n>, <C-p>
+lua require'completion'
