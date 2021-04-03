@@ -3,7 +3,6 @@ call plug#begin('~/.local/share/nvim/plugged')
 " Aquí irán los plugins a instalar
 Plug 'gruvbox-community/gruvbox'
 Plug 'tpope/vim-surround'
-Plug 'vim-airline/vim-airline'
 Plug 'mbbill/undotree'
 Plug 'junegunn/fzf', { 'do': { -> fzf#install() } }
 Plug 'junegunn/fzf.vim'
@@ -12,6 +11,9 @@ Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
+Plug 'airblade/vim-gitgutter' " show git changes
+Plug 'itchyny/lightline.vim' " bar
+Plug 'ryanoasis/vim-devicons' " icons in bar
 call plug#end()
 "
 " " Luego de esta línea puedes agregar tus configuraciones y mappings
