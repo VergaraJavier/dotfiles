@@ -25,5 +25,4 @@ set scrolloff=8
 "
 nnoremap <SPACE> <Nop>
 let mapleader=" "
-let g:airline_section_b = '%{strftime("%c")}'
 
