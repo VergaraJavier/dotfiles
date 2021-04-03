@@ -69,9 +69,9 @@ nmap <leader>q :bp <BAR> bd #<CR>
 
 " - Startup LSP Servers
 " - Set bindings: gr, gd, K, sd
-lua require'lsp'
+lua require'tomo.lsp'
 
 
 " - Configure completion engine
 " - Set bindings: <C-k>, <C-n>, <C-p>
-lua require'completion'
+lua require'tomo.completion'
