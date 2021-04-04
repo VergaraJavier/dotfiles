@@ -1,9 +1,3 @@
--- TODO: Migrate this to https://github.com/neovim/neovim/pull/12378 once merged
---vim.cmd("autocmd BufEnter * lua require'completion'.on_attach()")
-
--- Use <Tab> and <S-Tab> to navigate through popup menu
---vim.api.nvim_set_keymap("i", "<expr><Tab>", "pumvisible() ? \"\\<C-n>\" : \"\\<Tab>\"", { noremap = true })
---vim.api.nvim_set_keymap("i", "<expr><S-Tab>", "pumvisible() ? \"\\<C-p>\" : \"\\<S-Tab>\"", { noremap = true })
 
 vim.api.nvim_set_option("completeopt", "menuone,noinsert,noselect")
 
