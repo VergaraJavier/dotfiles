@@ -1,13 +1,10 @@
 local on_attach = require'completion'.on_attach
-require'lspconfig'.tsserver.setup{
-    on_attach=on_attach;
-    filetypes = { "javascript", "javascriptreact", "javascript.jsx", "typescriptreact", "typescript.tsx" };
-}
+require'lspconfig'.tsserver.setup{on_attach=on_attach}
 
-require'lspconfig'.denols.setup{
-    on_attach=on_attach;
-    filetypes = {"typescript"};
-}
+--require'lspconfig'.denols.setup{
+    --on_attach=on_attach;
+    --filetypes = {"typescript"};
+--}
 
 -- g(o) d(efinition)
 vim.api.nvim_set_keymap("n", "gd" , "<cmd>lua vim.lsp.buf.definition()<CR>", { noremap = true, silent = true })
