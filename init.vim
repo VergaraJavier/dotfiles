@@ -19,6 +19,7 @@ Plug 'Shougo/neosnippet.vim' " snippet support
 Plug 'Shougo/neosnippet-snippets' " actual snippets
 Plug 'nvim-lua/completion-nvim' " autocomplete
 Plug 'aca/completion-tabnine', { 'do': './install.sh' }
+Plug 'mfussenegger/nvim-jdtls'
 call plug#end()
 "
 " " Luego de esta línea puedes agregar tus configuraciones y mappings
@@ -76,6 +77,11 @@ lua require'tomo.lsp'
 " - Configure completion engine
 " - Set bindings: <C-k>, <C-n>, <C-p>
 lua require'tomo.completion'
+
+augroup lsp
+   au!
+   au FileType java lua require'tomo.jdtls_config'.setup()
+augroup end
 
 " Use <Tab> and <S-Tab> to navigate through popup menu
 inoremap <expr> <Tab>   pumvisible() ? "\<C-n>" : "\<Tab>"
