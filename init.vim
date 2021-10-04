@@ -20,6 +20,7 @@ Plug 'Shougo/neosnippet-snippets' " actual snippets
 Plug 'nvim-lua/completion-nvim' " autocomplete
 Plug 'aca/completion-tabnine', { 'do': './install.sh' }
 Plug 'mfussenegger/nvim-jdtls'
+Plug 'maxmellon/vim-jsx-pretty' "jsx sintaxis
 call plug#end()
 "
 " " Luego de esta línea puedes agregar tus configuraciones y mappings
