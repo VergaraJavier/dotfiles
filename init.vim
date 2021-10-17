@@ -15,10 +15,8 @@ Plug 'itchyny/lightline.vim' " bar
 Plug 'ryanoasis/vim-devicons' " icons in bar
 Plug 'jiangmiao/auto-pairs' " pair completion
 Plug 'neovim/nvim-lspconfig' " lsp
-Plug 'Shougo/neosnippet.vim' " snippet support
-Plug 'Shougo/neosnippet-snippets' " actual snippets
-Plug 'nvim-lua/completion-nvim' " autocomplete
-Plug 'aca/completion-tabnine', { 'do': './install.sh' }
+Plug 'ms-jpq/coq_nvim', {'branch': 'coq'} " autocompletion 
+Plug 'ms-jpq/coq.artifacts', {'branch': 'artifacts'} " snippets
 Plug 'mfussenegger/nvim-jdtls'
 Plug 'maxmellon/vim-jsx-pretty' "jsx sintaxis
 call plug#end()
@@ -71,13 +69,7 @@ nmap <leader>k :bnext<CR>
 nmap <leader>q :bp <BAR> bd #<CR>
 
 " - Startup LSP Servers
-" - Set bindings: gr, gd, K, sd
 lua require'tomo.lsp'
-
-
-" - Configure completion engine
-" - Set bindings: <C-k>, <C-n>, <C-p>
-lua require'tomo.completion'
 
 augroup lsp
    au!
