@@ -19,6 +19,7 @@ Plug 'ms-jpq/coq_nvim', {'branch': 'coq'} " autocompletion
 Plug 'ms-jpq/coq.artifacts', {'branch': 'artifacts'} " snippets
 Plug 'mfussenegger/nvim-jdtls'
 Plug 'maxmellon/vim-jsx-pretty' "jsx sintaxis
+Plug 'tpope/vim-commentary' " comenta usando gc en visual o gcc unica linea
 call plug#end()
 "
 " " Luego de esta línea puedes agregar tus configuraciones y mappings
@@ -51,6 +52,7 @@ let g:fzf_branch_actions = {
       \   'confirm': v:false,
       \ },
       \}
+
 
 " Line bubbling
 " Use these two if you don't have prettier
