@@ -68,6 +68,8 @@ nmap <leader>j :bprev<CR>
 nmap <leader>k :bnext<CR>
 nmap <leader>q :bp <BAR> bd #<CR>
 
+" seteo auto start para completion y solicito que inicio tabnine
+let g:coq_settings = { 'auto_start': v:true,'clients':{ 'tabnine': {'enabled': v:true} }  }
 " - Startup LSP Servers
 lua require'tomo.lsp'
 

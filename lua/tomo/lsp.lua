@@ -45,4 +45,4 @@ for _, lsp in ipairs(servers) do
     }
   }))
 end
-vim.cmd('COQnow -s')
+
