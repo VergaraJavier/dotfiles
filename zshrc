@@ -116,3 +116,4 @@ alias gps="git push"
 alias gpl="git pull --rebase"
 alias gl="git log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
 
+source /usr/share/nvm/init-nvm.sh
